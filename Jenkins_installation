@@ -1,0 +1,9 @@
+apt update -y
+    3  curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+    4  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]   https://pkg.jenkins.io/debian binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+    5  service jenkins status
+    6  wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add -
+    7  service jenkins status
+    8  apt update -y
+    9  apt install jenkins
+   10  systemctl status jenkins
