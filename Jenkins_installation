@@ -5,5 +5,6 @@ apt update -y
     6  wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add -
     7  apt install openjdk-ll-jdk
     8  apt update -y
+       apt upgrade -y
     9  apt install jenkins
    10  systemctl status jenkins
